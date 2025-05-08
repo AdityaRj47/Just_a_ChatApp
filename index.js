@@ -4,12 +4,15 @@ const {Server} = require("socket.io")
 const cors = require("cors");
 
 const app = express();
-app.use(cors())
+app.use(cors({
+  origin: "https://your-chat-app.netlify.app", // ✅ Your Netlify site URL
+  methods: ["GET", "POST"],
+}))
 
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-      origin: 'http://localhost:5173', 
+      origin: 'https://aditya-mp-chatapp.netlify.app/', 
       methods: ['GET', 'POST'],
     },
   });
