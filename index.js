@@ -5,7 +5,7 @@ const cors = require("cors");
 
 const app = express();
 app.use(cors({
-  origin: "https://your-chat-app.netlify.app", 
+  origin: "https://aditya-mp-chatapp.netlify.app/", 
   methods: ["GET", "POST"],
 }))
 
